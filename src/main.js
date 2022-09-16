@@ -518,12 +518,112 @@ function isPrimeToN(pn) {
 }
 console.log("----------------------------------------\nProblem #27");
 isPrimeToN(10);
+/* ---------------------------------------------*/
+/* 28. Write a ts program to find sum of all prime numbers between 1 to n.*/
+/* ---------------------------------------------*/
+function isPrime2(p) {
+    var prime = [];
+    var primeArray = [];
+    for (var pr = 1; pr <= p; pr++) {
+        if (p % pr == 0) {
+            prime.push(pr);
+        }
+    }
+    // console.log(prime)
+    if (prime.length > 2) {
+        primeArray.push(p);
+        // return p
+        // console.log(`${p}`)
+    }
+    return primeArray;
+}
+// function sumPrimeToN(sp: number) {
+// for (let spi = 1; spi <= 8; spi++) {
+//     console.log(isPrime2(spi))
+// }
+// }
+console.log("----------------------------------------\nProblem #28");
+console.log(isPrime2(11));
+/* ---------------------------------------------*/
+/* 29. Write a ts program to find all prime factors of a number.*/
+/* ---------------------------------------------*/
+console.log("----------------------------------------\nProblem #29\nUnsolved");
+// console.log(isPrime2(11))
+/* ---------------------------------------------*/
+/* 30. Write a ts program to check whether a number is Armstrong number or not.*/
+/* ---------------------------------------------*/
+function isArmstrong(ar) {
+    var arToString = ar.toString().split(''); //stringify the number, then make each digit an item in an array
+    var arArray = arToString.map(function (x) { return parseInt(x); }); //convert all the items back into numbers
+    // console.log(arArray)
+    var arrayArmstrong = [];
+    for (var ari = 0; ari < arArray.length; ari++) {
+        arrayArmstrong.push(Math.pow((arArray[ari]), arArray.length));
+    }
+    console.log(arrayArmstrong);
+    var sumArrayArmstrong = 0;
+    for (var aAi = 0; aAi < arrayArmstrong.length; aAi++) {
+        sumArrayArmstrong = sumArrayArmstrong + arrayArmstrong[aAi];
+    }
+    console.log(sumArrayArmstrong);
+    if (ar == sumArrayArmstrong) {
+        console.log("The Number ".concat(ar, " is \"ARMSTRONG\""));
+    }
+    else {
+        console.log("The Number ".concat(ar, " is \"NOT ARMSTRONG\""));
+    }
+}
+console.log("----------------------------------------\nProblem #30");
+isArmstrong(1634);
+/* ---------------------------------------------*/
+/* 31. Write a ts program to print all Armstrong numbers between 1 to n. */
+/* ---------------------------------------------*/
+console.log("----------------------------------------\nProblem #31\nUnsolved");
+/* ---------------------------------------------*/
+/*  32. Write a ts program to check whether a number is Perfect number or not.*/
+/* ---------------------------------------------*/
+// function FactrOfNumber(x: number) {
+//     for (var fn = 1; fn <= x; fn++) {
+//         if (x % fn == 0) {
+//             console.log(`${fn}`)
+//         }
+//     }
+// }
+// console.log(`----------------------------------------
+// Problem #22`)
+// let fectNum: number = 15
+// console.log(`Factors of Number ${fectNum} `)
+// FactrOfNumber(fectNum)
+function isPerfect(pe) {
+    var peFactors = [];
+    var numPerfect = 0;
+    for (var pei = 1; pei < pe; pei++) {
+        if (pe % pei == 0) {
+            peFactors.push(pei);
+        }
+    }
+    console.log(peFactors);
+    for (var pes = 0; pes < peFactors.length; pes++) {
+        numPerfect = numPerfect + peFactors[pes];
+    }
+    console.log(numPerfect);
+    if (pe == numPerfect) {
+        console.log("The Number(".concat(pe, ") is \"PERFECT\""));
+    }
+    else {
+        console.log("The Number(".concat(pe, ") is \"NOT PERFECT\""));
+    }
+}
+console.log("----------------------------------------\nProblem #32");
+isPerfect(496);
+/* ---------------------------------------------*/
+/* 33. Write a ts program to print all Perfect numbers between 1 to n. */
+/* ---------------------------------------------*/
+console.log("----------------------------------------\nProblem #33\nUnsolved");
+/* ---------------------------------------------*/
+/*  */
+/* ---------------------------------------------*/
 /*
-28. Write a ts program to find sum of all prime numbers between 1 to n.
-29. Write a ts program to find all prime factors of a number.
-30. Write a ts program to check whether a number is Armstrong number or not.
-31. Write a ts program to print all Armstrong numbers between 1 to n.
-32. Write a ts program to check whether a number is Perfect number or not.
 33. Write a ts program to print all Perfect numbers between 1 to n.
 34. Write a ts program to check whether a number is Strong number or not.
 35. Write a ts program to print all Strong numbers between 1 to n.
