@@ -746,7 +746,7 @@ Unsolved`)
 
 function isPerfect(pe: number) {
     let peFactors: number[] = []
-    let numPerfect:number = 0
+    let numPerfect: number = 0
 
     for (let pei: number = 1; pei < pe; pei++) {
         if (pe % pei == 0) {
@@ -755,15 +755,15 @@ function isPerfect(pe: number) {
     }
     console.log(peFactors)
 
-    for(let pes:number = 0; pes < peFactors.length; pes++){
+    for (let pes: number = 0; pes < peFactors.length; pes++) {
         numPerfect = numPerfect + peFactors[pes]
     }
     console.log(numPerfect)
 
-    if(pe == numPerfect){
+    if (pe == numPerfect) {
         console.log(`The Number(${pe}) is "PERFECT"`)
     }
-    else{
+    else {
         console.log(`The Number(${pe}) is "NOT PERFECT"`)
     }
 }
@@ -780,15 +780,112 @@ Problem #33
 Unsolved`)
 
 /* ---------------------------------------------*/
+/* 34. Write a ts program to check whether a number is Strong number or not. */
+/* ---------------------------------------------*/
+
+function isStrong(s: number) {
+
+    let sToString = s.toString().split('') //stringify the number, then make each digit an item in an array
+    let sArray: number[] = sToString.map(x => parseInt(x)) //convert all the items back into numbers
+    // console.log(sArray)
+
+    function factorial34(f: number) {
+
+        let factNum = 1
+        for (var n = 1; n <= f; n++) {
+            factNum = factNum * n
+        }
+        // console.log(`The Facotrial Of Digits (${f}!) = ${factNum}`)
+        return factNum
+    }
+
+    let NewsArray = sArray.map(factorial34);
+
+    console.log(NewsArray)
+
+    let strongNum:number = 0
+    for(let sn = 0; sn<NewsArray.length; sn++){
+        strongNum = strongNum + NewsArray[sn]
+    }
+    if(s == strongNum){
+
+        console.log(`The NUmber ${s} is "STRONG NUMBER"`)
+    }
+    else{
+        console.log(`The NUmber ${s} is "NOT STRONG NUMBER"`)
+    }
+}
+/*
+1, 2, 145, 40585 are Strong number
+*/
+
+console.log(`----------------------------------------
+Problem #34`)
+isStrong(1145)
+
+/* ---------------------------------------------*/
+/* 35. Write a ts program to print all Strong numbers between 1 to n. */
+/* ---------------------------------------------*/
+console.log(`----------------------------------------
+Problem #35
+Unsolved`)
+
+/* ---------------------------------------------*/
+/* 36. Write a ts program to print Fibonacci series up to n terms. */
+/* ---------------------------------------------*/
+function FibonacciSeries(fs: number){
+
+    let fsArray:number[] = []
+    let fsNum:number = 0
+    for(let fsi = 0; fsi < fs; fsi++){
+        fsNum = fsNum + fsi
+        fsArray.push(fsNum)
+    }
+    console.log(fsArray)
+    console.log(fsNum)
+}
+console.log(`----------------------------------------
+Problem #36`)
+FibonacciSeries(8)
+
+/* ---------------------------------------------*/
+/*  37. Write a ts program to find one's complement of a binary number.*/
+/* ---------------------------------------------*/
+
+
+
+console.log(`----------------------------------------
+Problem #37`)
+/* ---------------------------------------------*/
+/*  45(a). Write a ts program to convert Decimal to Binary number system.*/
+/* ---------------------------------------------*/
+function decToBinA(db:number){
+    let dtb = db.toString(2).split('')      //stringify the number into base 2, then make each digit an item in an array
+    let dtbArray:number[] = dtb.map(x => parseInt(x))       //convert all the items back into numbers
+    let dtbNum = dtbArray.join('')
+    console.log(dtbNum)
+}
+console.log(`----------------------------------------
+Problem #45(a)`)
+decToBinA(255)
+
+/* ---------------------------------------------*/
+/*  45(b). Write a ts program to convert Decimal to Binary number system.*/
+/* ---------------------------------------------*/
+function decToBinB(db:number){
+    let dtb = db.toString(2).split('')      //stringify the number into base 2, then make each digit an item in an array
+    let dtbArray:number[] = dtb.map(x => parseInt(x))       //convert all the items back into numbers
+    let dtbNum = dtbArray.join('')
+    console.log(dtbNum)
+}
+console.log(`----------------------------------------
+Problem #45(b)`)
+decToBinB(255)
+/* ---------------------------------------------*/
 /*  */
 /* ---------------------------------------------*/
 
 /*
-33. Write a ts program to print all Perfect numbers between 1 to n.
-34. Write a ts program to check whether a number is Strong number or not.
-35. Write a ts program to print all Strong numbers between 1 to n.
-36. Write a ts program to print Fibonacci series up to n terms.
-37. Write a ts program to find one's complement of a binary number.
 38. Write a ts program to find two's complement of a binary number.
 39. Write a ts program to convert Binary to Octal number system.
 40. Write a ts program to convert Binary to Decimal number system.
@@ -796,7 +893,6 @@ Unsolved`)
 42. Write a ts program to convert Octal to Binary number system.
 43. Write a ts program to convert Octal to Decimal number system.
 44. Write a ts program to convert Octal to Hexadecimal number system.
-45. Write a ts program to convert Decimal to Binary number system.
 46. Write a ts program to convert Decimal to Octal number system.
 47. Write a ts program to convert Decimal to Hexadecimal number system.
 48. Write a ts program to convert Hexadecimal to Binary number system.
@@ -804,3 +900,10 @@ Unsolved`)
 50. Write a ts program to convert Hexadecimal to Decimal number system.
 51. Write a ts program to print Pascal triangle upto n rows. */
 
+/*
+
+let arToString = ar.toString().split('') //stringify the number, then make each digit an item in an array
+let arArray: number[] = arToString.map(x => parseInt(x)) //convert all the items back into numbers
+// console.log(arArray)
+
+*/
