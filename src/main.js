@@ -1,248 +1,235 @@
 // /* ---------------------------------------------*/
 // /* 1. Write a ts program to print all natural numbers from 1 to n. - using while loop*/
 // /* ---------------------------------------------*/
-// var problem01 = document.querySelector("#problem01")! as HTMLFormElement
-// var input01a = document.querySelector("#input01a")! as HTMLInputElement
-// var input01b = document.querySelector("#input01b")! as HTMLInputElement
-// function whileLoopNtoY(x: number, y: number) {
-//     if (x < y) {
-//         while (x <= y) {
-//             console.log(`${x}`)
-//             x++
-//         }
-//     }
-//     else {
-//         console.log(`Loop From ${x} must be less than Loop T0 ${y}`)
-//     }
-// }
-// problem01.addEventListener("submit", (e: Event) => {
-//     e.preventDefault()
-//     whileLoopNtoY(input01a.valueAsNumber, input01b.valueAsNumber)
-// })
+var problem01 = document.querySelector("#problem01");
+var input01a = document.querySelector("#input01a");
+var input01b = document.querySelector("#input01b");
+function whileLoopNtoY(x, y) {
+    if (x < y) {
+        while (x <= y) {
+            console.log("".concat(x));
+            x++;
+        }
+    }
+    else {
+        console.log("Loop From ".concat(x, " must be less than Loop T0 ").concat(y));
+    }
+}
+problem01.addEventListener("submit", function (e) {
+    e.preventDefault();
+    whileLoopNtoY(input01a.valueAsNumber, input01b.valueAsNumber);
+});
 // /* ---------------------------------------------*/
 // /* 2. Write a ts program to print all natural numbers in reverse (from n to 1). - using while loop*/
 // /* ---------------------------------------------*/
-// var problem02 = document.querySelector("#problem02")! as HTMLFormElement
-// var input02a = document.querySelector("#input02a")! as HTMLInputElement
-// var input02b = document.querySelector("#input02b")! as HTMLInputElement
-// function nFromY(x: number, y: number) {
-//     if (x > y) {
-//         while (x >= y) {
-//             console.log(`${x}`)
-//             x--
-//         }
-//     }
-//     else {
-//         console.log(`Loop From ${x} must be greater than Loop T0 ${y}`)
-//     }
-// }
-// problem02.addEventListener("submit", (e: Event) => {
-//     e.preventDefault()
-//     nFromY(input02a.valueAsNumber, input02b.valueAsNumber)
-// })
+var problem02 = document.querySelector("#problem02");
+var input02a = document.querySelector("#input02a");
+var input02b = document.querySelector("#input02b");
+function nFromY(x, y) {
+    if (x > y) {
+        while (x >= y) {
+            console.log("".concat(x));
+            x--;
+        }
+    }
+    else {
+        console.log("Loop From ".concat(x, " must be greater than Loop T0 ").concat(y));
+    }
+}
+problem02.addEventListener("submit", function (e) {
+    e.preventDefault();
+    nFromY(input02a.valueAsNumber, input02b.valueAsNumber);
+});
 // /* ---------------------------------------------*/
 // /* 3. Write a ts program to print all alphabets from a to z. - using while loop */
 // /* ---------------------------------------------*/
-// var problem03 = document.querySelector("#problem03")! as HTMLFormElement
-// function printabc() {
-//     var abc: string = ('abcdefghijklmnopqrstuvwxyz')
-//     var i = 0
-//     while (i <= abc.length) {
-//         console.log(`${abc[i]}`)
-//         i++
-//     }
-// }
-// problem03.addEventListener("submit", (e: Event) => {
-//     e.preventDefault()
-//     printabc()
-// })
+var problem03 = document.querySelector("#problem03");
+function printabc() {
+    var abc = ('abcdefghijklmnopqrstuvwxyz');
+    var i = 0;
+    while (i <= abc.length) {
+        console.log("".concat(abc[i]));
+        i++;
+    }
+}
+problem03.addEventListener("submit", function (e) {
+    e.preventDefault();
+    printabc();
+});
 // /* ---------------------------------------------*/
 // /* 4. Write a ts program to print all even numbers between 1 to 100. - using while loop*/
 // /* ---------------------------------------------*/
-// var problem04 = document.querySelector("#problem04")! as HTMLFormElement
-// function printEven() {
-//     var e: number = 2
-//     while (e < 100) {
-//         if (e % 2 == 0) {
-//             console.log(`${e}`)
-//         }
-//         e++
-//     }
-// }
-// problem04.addEventListener("submit", (e: Event) => {
-//     e.preventDefault()
-//     printEven()
-// })
+var problem04 = document.querySelector("#problem04");
+function printEven() {
+    var e = 2;
+    while (e < 100) {
+        if (e % 2 == 0) {
+            console.log("".concat(e));
+        }
+        e++;
+    }
+}
+problem04.addEventListener("submit", function (e) {
+    e.preventDefault();
+    printEven();
+});
 // /* ---------------------------------------------*/
 // /* 5. Write a ts program to print all odd number between 1 to 100.*/
 // /* ---------------------------------------------*/
-// var problem05 = document.querySelector("#problem05")! as HTMLFormElement
-// function printOdd() {
-//     var o: number = 1
-//     while (o < 100) {
-//         if (o % 2 == 1) {
-//             console.log(`${o}`)
-//         }
-//         o++
-//     }
-// }
-// problem05.addEventListener("submit", (e: Event) => {
-//     e.preventDefault()
-//     printOdd()
-// })
+var problem05 = document.querySelector("#problem05");
+function printOdd() {
+    var o = 1;
+    while (o < 100) {
+        if (o % 2 == 1) {
+            console.log("".concat(o));
+        }
+        o++;
+    }
+}
+problem05.addEventListener("submit", function (e) {
+    e.preventDefault();
+    printOdd();
+});
 // /* ---------------------------------------------*/
 // /* 6. Write a ts program to find sum of all natural numbers between 1 to n.*/
 // /* ---------------------------------------------*/
-// var problem06 = document.querySelector("#problem06")! as HTMLFormElement
-// var input06 = document.querySelector("#input06")! as HTMLInputElement
-// function sumTonNumber(x: number) {
-//     var sum: number = 0
-//     var i: number = 1
-//     while (i <= x) {
-//         console.log(`${i} + ${sum} = ${sum + i}`)
-//         sum = sum + i
-//         i++
-//     }
-// }
-// problem06.addEventListener("submit", (e: Event) => {
-//     e.preventDefault()
-//     sumTonNumber(input06.valueAsNumber)
-// })
+var problem06 = document.querySelector("#problem06");
+var input06 = document.querySelector("#input06");
+function sumTonNumber(x) {
+    var sum = 0;
+    var i = 1;
+    while (i <= x) {
+        console.log("".concat(i, " + ").concat(sum, " = ").concat(sum + i));
+        sum = sum + i;
+        i++;
+    }
+}
+problem06.addEventListener("submit", function (e) {
+    e.preventDefault();
+    sumTonNumber(input06.valueAsNumber);
+});
 // /* ---------------------------------------------*/
 // /* 7. Write a ts program to find sum of all even numbers between 1 to n.*/
 // /* ---------------------------------------------*/
-// var problem07 = document.querySelector("#problem07")! as HTMLFormElement
-// var input07 = document.querySelector("#input07")! as HTMLInputElement
-// function printEvenTon(x: number) {
-//     var e: number = 2
-//     var evenSum: number = 0
-//     while (e < x) {
-//         if (e % 2 == 0) {
-//             console.log(`${e} + ${evenSum} = ${evenSum + e}`)
-//             evenSum = evenSum + e
-//         }
-//         e++
-//     }
-// }
-// problem07.addEventListener("submit", (e: Event) => {
-//     e.preventDefault()
-//     printEvenTon(input07.valueAsNumber)
-// })
+var problem07 = document.querySelector("#problem07");
+var input07 = document.querySelector("#input07");
+function printEvenTon(x) {
+    var e = 2;
+    var evenSum = 0;
+    while (e < x) {
+        if (e % 2 == 0) {
+            console.log("".concat(e, " + ").concat(evenSum, " = ").concat(evenSum + e));
+            evenSum = evenSum + e;
+        }
+        e++;
+    }
+}
+problem07.addEventListener("submit", function (e) {
+    e.preventDefault();
+    printEvenTon(input07.valueAsNumber);
+});
 // /* ---------------------------------------------*/
 // /* 8. Write a ts program to find sum of all odd numbers between 1 to n.*/
 // /* ---------------------------------------------*/
-// var problem08 = document.querySelector("#problem08")! as HTMLFormElement
-// var input08 = document.querySelector("#input08")! as HTMLInputElement
-// function printOddTon(x: number) {
-//     var o: number = 1
-//     var oddSum: number = 0
-//     while (o < x) {
-//         if (o % 2 == 1) {
-//             console.log(`${o} + ${oddSum} = ${oddSum + o}`)
-//             oddSum = oddSum + o
-//         }
-//         o++
-//     }
-// }
-// problem08.addEventListener("submit", (e: Event) => {
-//     e.preventDefault()
-//     printOddTon(input08.valueAsNumber)
-// })
-// /* ---------------------------------------------*/
-// /* 9. Write a ts program to print multiplication table of any number.*/
-// /* ---------------------------------------------*/
-// var problem09 = document.querySelector("#problem09")! as HTMLFormElement
-// var input09 = document.querySelector("#input09")! as HTMLInputElement
-// function whatTable(x: number) {
-//     for (var t = 1; t <= 10; t++) {
-//         console.log(`${x} x ${t} = ${x * t}`)
-//     }
-// }
-// problem09.addEventListener("submit", (e: Event) => {
-//     e.preventDefault()
-//     whatTable(input09.valueAsNumber)
-// })
-// /* ---------------------------------------------*/
-// /* 10. Write a ts program to count number of digits in a number.*/
-// /* ---------------------------------------------*/
-// var problem10 = document.querySelector("#problem10")! as HTMLFormElement
-// var input10 = document.querySelector("#input10")! as HTMLInputElement
-// function countDigits(x: number) {
-//     var count = x.toString().length
-//     console.log(count)
-// }
-// problem10.addEventListener("submit", (e: Event) => {
-//     e.preventDefault()
-//     countDigits(input10.valueAsNumber)
-// })
-// /* ---------------------------------------------*/
-// /* 11. Write a ts program to find first and last digit of a number.*/
-// /* ---------------------------------------------*/
-// var problem11 = document.querySelector("#problem11")! as HTMLFormElement
-// var input11 = document.querySelector("#input11")! as HTMLInputElement
-// function flDigits(x: number) {
-//     var digit = x.toString()
-//     var lDigit = (x.toString().length) - 1
-//     console.log(`    The Number is = ${x}
-//     First Digit of the Number = ${digit[0]}
-//     Last  Digit of the Number = ${digit[lDigit]}`)
-// }
-// problem11.addEventListener("submit", (e: Event) => {
-//     e.preventDefault()
-//     flDigits(input11.valueAsNumber)
-// })
-// /* ---------------------------------------------*/
-// /* 12. Write a ts program to find sum of first and last digit of a number.*/
-// /* ---------------------------------------------*/
-// var problem12 = document.querySelector("#problem12")! as HTMLFormElement
-// var input12 = document.querySelector("#input12")! as HTMLInputElement
-// function flDigitSum(a: number) {
-//     let numArray = a.toString().split('') //stringify the number, then make each digit an item in an array
-//     let newArray = numArray.map(x => parseInt(x)) //convert all the items back into numbers
-//     console.log(newArray[0] + newArray[newArray.length-1])
-// }
-// problem12.addEventListener("submit", (e: Event) => {
-//     e.preventDefault()
-//     flDigitSum(input12.valueAsNumber)
-// })
-// /* ---------------------------------------------*/
-// /* 13. Write a ts program to swap first and last digits of a number.*/
-// /* ---------------------------------------------*/
-// var problem13 = document.querySelector("#problem13")! as HTMLFormElement
-// var input13 = document.querySelector("#input13")! as HTMLInputElement
-// function swapDigit(a: number) {
-//     let numArray = a.toString().split('') //stringify the number, then make each digit an item in an array
-//     let newArray = numArray.map(x => parseInt(x)) //convert all the items back into numbers
-//     var x:number = 0    // First element of Array
-//     var y:number = -1   // Last element of Array
-//     newArray[x] = newArray.splice(y, 1, newArray[x])[0];
-//     console.log(newArray)
-// }
-// problem13.addEventListener("submit", (e: Event) => {
-//     e.preventDefault()
-//     swapDigit(input13.valueAsNumber)
-// })
-// /* ---------------------------------------------*/
-// /* 14. Write a ts program to calculate sum of digits of a number.*/
-// /* ---------------------------------------------*/
-// var problem14 = document.querySelector("#problem14")! as HTMLFormElement
-// var input14 = document.querySelector("#input14")! as HTMLInputElement
-// function sumOfDigits(a: number) {
-//     let numArray = a.toString().split('') //stringify the number, then make each digit an item in an array
-//     let newArray:number[] = numArray.map(x => parseInt(x)) //convert all the items back into numbers
-//     let arrayLenth = newArray.length
-//     // console.log(`Array Length  ${arrayLenth}`)
-//     let sOd = 0
-//     for(var n = 0; n < arrayLenth; n++){
-//         // console.log(`${sOd} + ${newArray[n]} = ${newArray[n] + sOd}`)
-//         sOd = newArray[n] + sOd
-//     }
-//     console.log(`The Sum Of Digits = ${sOd}`)
-// }
-// problem14.addEventListener("submit", (e: Event) => {
-//     e.preventDefault()
-//     sumOfDigits(input14.valueAsNumber)
-// })
+var problem08 = document.querySelector("#problem08");
+var input08 = document.querySelector("#input08");
+function printOddTon(x) {
+    var o = 1;
+    var oddSum = 0;
+    while (o < x) {
+        if (o % 2 == 1) {
+            console.log("".concat(o, " + ").concat(oddSum, " = ").concat(oddSum + o));
+            oddSum = oddSum + o;
+        }
+        o++;
+    }
+}
+problem08.addEventListener("submit", function (e) {
+    e.preventDefault();
+    printOddTon(input08.valueAsNumber);
+});
+/* ---------------------------------------------*/
+/* 9. Write a ts program to print multiplication table of any number.*/
+/* ---------------------------------------------*/
+/* ---------------------------------------------*/
+/* 10. Write a ts program to count number of digits in a number.*/
+/* ---------------------------------------------*/
+var problem10 = document.querySelector("#problem10");
+var input10 = document.querySelector("#input10");
+function countDigits(x) {
+    var count = x.toString().length;
+    console.log(count);
+}
+problem10.addEventListener("submit", function (e) {
+    e.preventDefault();
+    countDigits(input10.valueAsNumber);
+});
+/* ---------------------------------------------*/
+/* 11. Write a ts program to find first and last digit of a number.*/
+/* ---------------------------------------------*/
+var problem11 = document.querySelector("#problem11");
+var input11 = document.querySelector("#input11");
+function flDigits(x) {
+    var digit = x.toString();
+    var lDigit = (x.toString().length) - 1;
+    console.log("    The Number is = ".concat(x, "\n    First Digit of the Number = ").concat(digit[0], "\n    Last  Digit of the Number = ").concat(digit[lDigit]));
+}
+problem11.addEventListener("submit", function (e) {
+    e.preventDefault();
+    flDigits(input11.valueAsNumber);
+});
+/* ---------------------------------------------*/
+/* 12. Write a ts program to find sum of first and last digit of a number.*/
+/* ---------------------------------------------*/
+var problem12 = document.querySelector("#problem12");
+var input12 = document.querySelector("#input12");
+function flDigitSum(a) {
+    var numArray = a.toString().split(''); //stringify the number, then make each digit an item in an array
+    var newArray = numArray.map(function (x) { return parseInt(x); }); //convert all the items back into numbers
+    console.log(newArray[0] + newArray[newArray.length - 1]);
+}
+problem12.addEventListener("submit", function (e) {
+    e.preventDefault();
+    flDigitSum(input12.valueAsNumber);
+});
+/* ---------------------------------------------*/
+/* 13. Write a ts program to swap first and last digits of a number.*/
+/* ---------------------------------------------*/
+var problem13 = document.querySelector("#problem13");
+var input13 = document.querySelector("#input13");
+function swapDigit(a) {
+    var numArray = a.toString().split(''); //stringify the number, then make each digit an item in an array
+    var newArray = numArray.map(function (x) { return parseInt(x); }); //convert all the items back into numbers
+    var x = 0; // First element of Array
+    var y = -1; // Last element of Array
+    newArray[x] = newArray.splice(y, 1, newArray[x])[0];
+    console.log(newArray);
+}
+problem13.addEventListener("submit", function (e) {
+    e.preventDefault();
+    swapDigit(input13.valueAsNumber);
+});
+/* ---------------------------------------------*/
+/* 14. Write a ts program to calculate sum of digits of a number.*/
+/* ---------------------------------------------*/
+var problem14 = document.querySelector("#problem14");
+var input14 = document.querySelector("#input14");
+function sumOfDigits(a) {
+    var numArray = a.toString().split(''); //stringify the number, then make each digit an item in an array
+    var newArray = numArray.map(function (x) { return parseInt(x); }); //convert all the items back into numbers
+    var arrayLenth = newArray.length;
+    // console.log(`Array Length  ${arrayLenth}`)
+    var sOd = 0;
+    for (var n = 0; n < arrayLenth; n++) {
+        // console.log(`${sOd} + ${newArray[n]} = ${newArray[n] + sOd}`)
+        sOd = newArray[n] + sOd;
+    }
+    console.log("The Sum Of Digits = ".concat(sOd));
+}
+problem14.addEventListener("submit", function (e) {
+    e.preventDefault();
+    sumOfDigits(input14.valueAsNumber);
+});
 /* ---------------------------------------------*/
 /* 15. Write a ts program to calculate product of digits of a number.*/
 /* ---------------------------------------------*/
@@ -679,14 +666,22 @@ console.log("----------------------------------------\nProblem #37");
 /* ---------------------------------------------*/
 /*  45(a). Write a ts program to convert Decimal to Binary number system.*/
 /* ---------------------------------------------*/
-function decToBinA(db) {
-    var dtb = db.toString(2).split(''); //stringify the number into base 2, then make each digit an item in an array
-    var dtbArray = dtb.map(function (x) { return parseInt(x); }); //convert all the items back into numbers
-    var dtbNum = dtbArray.join('');
-    console.log(dtbNum);
+/*function decToBinA(db:number){
+    let binNum:number[] = []
+    let step:number = 0
+    
+    if(db != 0){
+        for(let dbi = 0; dbi<db; dbi++){
+            step =
+            let reminder:number =
+        }
+    }
+    
+
 }
-console.log("----------------------------------------\nProblem #45(a)");
-decToBinA(255);
+console.log(`----------------------------------------
+Problem #45(a)`)
+decToBinA(255)      */
 /* ---------------------------------------------*/
 /*  45(b). Write a ts program to convert Decimal to Binary number system.*/
 /* ---------------------------------------------*/
